@@ -23,4 +23,9 @@ Route::middleware('auth:sanctum')->group(function () {
     // Phase 4: Production Pipeline & Operations
     Route::apiResource('bookings', \App\Http\Controllers\Api\BookingController::class);
     Route::apiResource('orders', \App\Http\Controllers\Api\OrderController::class);
+
+    // Phase 5: Financials & Payments
+    Route::apiResource('invoices', \App\Http\Controllers\Api\InvoiceController::class);
+    Route::apiResource('payments', \App\Http\Controllers\Api\PaymentController::class);
+    Route::apiResource('expenses', \App\Http\Controllers\Api\ExpenseController::class);
 });
