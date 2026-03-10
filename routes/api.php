@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('service-categories', ServiceCategoryController::class);
     Route::apiResource('products', ProductController::class);
     Route::apiResource('addons', AddonController::class);
+
+    // Phase 4: Production Pipeline & Operations
+    Route::apiResource('bookings', \App\Http\Controllers\Api\BookingController::class);
+    Route::apiResource('orders', \App\Http\Controllers\Api\OrderController::class);
 });
