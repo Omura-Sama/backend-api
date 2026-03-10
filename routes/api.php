@@ -28,4 +28,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('invoices', \App\Http\Controllers\Api\InvoiceController::class);
     Route::apiResource('payments', \App\Http\Controllers\Api\PaymentController::class);
     Route::apiResource('expenses', \App\Http\Controllers\Api\ExpenseController::class);
+
+    // Phase 6: Reporting & Analytics
+    Route::get('reports/dashboard', [\App\Http\Controllers\Api\ReportController::class, 'dashboardSummary']);
 });
